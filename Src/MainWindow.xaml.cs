@@ -27,16 +27,12 @@ namespace GreatMapsTest
             GMapProvider.WebProxy.Credentials = CredentialCache.DefaultCredentials;
 
             mcMapControl.DragButton = MouseButton.Left;
-
             mcMapControl.MapProvider = GMapProviders.OpenStreetMap;
-
             mcMapControl.Manager.Mode = AccessMode.ServerAndCache;
-
             mcMapControl.MouseWheelZoomType = MouseWheelZoomType.MousePositionAndCenter;
             mcMapControl.ShowCenter = false;
             mcMapControl.MinZoom = 2;
             mcMapControl.MaxZoom = 22;
-
             mcMapControl.Position = new PointLatLng( 49.761471 , 6.650053 );
             mcMapControl.Zoom = 14;
         }
@@ -86,7 +82,9 @@ namespace GreatMapsTest
         /// <param name="e"></param>
         private void Button_CreateEllipse_Click( object sender , RoutedEventArgs e )
         {
+            GMapEllipse ellipse = new GMapEllipse( new PointLatLng( 49.761471 , 6.650053 ) , 200 );
 
+            mcMapControl.Markers.Add( ellipse );
         }
 
     } // end public partial class MainWindow 
