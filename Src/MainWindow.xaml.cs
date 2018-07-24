@@ -78,5 +78,16 @@ namespace GreatMapsTest
 
             mcMapControl.Markers.Add( route );
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_CreateEllipse_Click( object sender , RoutedEventArgs e )
+        {
+
+        }
+
     } // end public partial class MainWindow 
 }
